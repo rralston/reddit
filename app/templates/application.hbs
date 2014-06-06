@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href>Reddit</a>
+    </div>
+    <ul class="nav navbar-nav">
+      {{#each}}
+				{{#link-to "subreddit" this tagName="li" href=false}}
+					<a {{bind-attr href="view.href"}}>{{this}}</a>
+				{{/link-to}}
+      {{/each}}
+    </ul>
+  </div>
+</nav>
+
+{{outlet}}
